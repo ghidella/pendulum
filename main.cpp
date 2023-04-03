@@ -6,6 +6,16 @@ int main()
     // create a window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pendulum", sf::Style::Close | sf::Style::Titlebar);
 
+    // Load the background image
+    sf::Texture backgroundTexture;
+    if (!backgroundTexture.loadFromFile("background.png"))
+    {
+        return EXIT_FAILURE;
+    }
+
+    // Create a sprite for the background
+    sf::Sprite backgroundSprite(backgroundTexture);
+
     // set up variables
     const float gravity = 9.81f; // m/s^2
     const float length = 400.f;  // length of the pendulum in pixels
@@ -21,11 +31,12 @@ int main()
 
     // create the circle
     sf::CircleShape circle(radius);
-    circle.setFillColor(sf::Color::Green);
+    circle.setFillColor(sf::Color::Red);
     circle.setOrigin(radius, radius); // set the origin to the center of the circle
 
     while (window.isOpen())
     {
+
         // handle events
         sf::Event event;
         while (window.pollEvent(event))
@@ -49,12 +60,10 @@ int main()
         // update the position of the second vertex of the line
         line[1].position = sf::Vector2f(line[0].position.x + x, line[0].position.y + y);
 
-        window.clear(sf::Color::White);
+        // Draw the background sprite
+        window.draw(backgroundSprite);
 
-        // draw the line
         window.draw(line);
-
-        // draw the circle
         window.draw(circle);
 
         // draw a line from the top of the line segment to the position of the circle
@@ -64,6 +73,7 @@ int main()
                 sf::Vertex(circle.getPosition())
 
             };
+
         // set the color of the connector
         sf::Color connectorColor = sf::Color::Black;
         connector[0].color = connectorColor;
