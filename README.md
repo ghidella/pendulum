@@ -11,7 +11,7 @@ g++ -Isrc/include -c main.cpp
 ```
 Now, you must link the compiled file to the SFML libraries in order to get the final executable with the following command:
 ```bash
-g++ main.o -o main -LC:\SFML-2.5.1\lib -lsfml-graphics -lsfml-window -lsfml-system
+g++ main.o -o pendulum -Lsrc/lib -lsfml-graphics -lsfml-window -lsfml-system
 ```
 It's done, just run it
 ```bash
