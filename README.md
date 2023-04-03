@@ -15,5 +15,5 @@ g++ main.o -o pendulum -Lsrc/lib -lsfml-graphics -lsfml-window -lsfml-system
 ```
 It's done, just run it
 ```bash
-.\pendulum.exe
+./pendulum.exe
 ```
