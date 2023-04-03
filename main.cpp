@@ -24,7 +24,6 @@ int main()
     circle.setFillColor(sf::Color::Green);
     circle.setOrigin(radius, radius); // set the origin to the center of the circle
 
-    // main loop
     while (window.isOpen())
     {
         // handle events
@@ -50,7 +49,6 @@ int main()
         // update the position of the second vertex of the line
         line[1].position = sf::Vector2f(line[0].position.x + x, line[0].position.y + y);
 
-        // clear the window
         window.clear(sf::Color::White);
 
         // draw the line
@@ -72,7 +70,6 @@ int main()
         connector[1].color = connectorColor;
         window.draw(connector, 2, sf::Lines);
 
-        // display the window
         window.display();
     }
 
