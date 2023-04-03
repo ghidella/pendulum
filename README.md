@@ -18,3 +18,6 @@ It's done, just run it
 ```bash
 ./pendulum.exe
 ```
+
+Screenshot
+[![example.png](https://i.postimg.cc/NMg2SVqH/example.png)](https://postimg.cc/3ycwDtw8)
