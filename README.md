@@ -1,6 +1,7 @@
 # SFML Pendulum
 > Simple C++ pendulum animation for windows using [SFML](https://www.sfml-dev.org/).
-![Running App](./GIF.gif)
+
+[![Running App](./GIF.gif)]
 
 ## Installation & Usage
 Follow the steps below for running it
