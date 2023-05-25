@@ -1,4 +1,5 @@
 # SFML Pendulum
+![Running App](./GIF.gif)
 ## Simple C++ pendulum animation for windows using [SFML](https://www.sfml-dev.org/).
 Follow the steps below for running it
 
@@ -19,4 +20,3 @@ It's done, just run it
 ./pendulum.exe
 ```
 
-[![example.png](https://i.postimg.cc/NMg2SVqH/example.png)](https://postimg.cc/3ycwDtw8)
